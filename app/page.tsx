@@ -10,8 +10,8 @@ const Home = () => {
   return(
     <Provider store={store}>
       <main className="m-2">
-        <div className="flex justify-between">
-            <div className=" flex m-5 w-50 grid grid-cols-3 justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:justify-between">
+            <div className=" flex m-5 w-50 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4">
               {store.todos.map((item: ITodoModel, idx) => (
                 <TaskCard data={item} key={idx}  />
               ))}
